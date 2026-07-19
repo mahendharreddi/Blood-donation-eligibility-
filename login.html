@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Login | Blood Donor Eligibility System</title>
+
+    <!-- Login CSS -->
+    <link rel="stylesheet" href="login.css">
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    >
+
+    <!-- Google Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+</head>
+
+<body>
+
+<div class="login-page">
+
+
+    <!-- ================================= -->
+    <!-- LEFT SIDE -->
+    <!-- ================================= -->
+
+    <section class="left-section">
+
+
+        <!-- Logo -->
+
+        <a href="index.html" class="brand">
+
+            <div class="brand-icon">
+
+                <i class="fa-solid fa-droplet"></i>
+
+                <span>+</span>
+
+            </div>
+
+
+            <div>
+
+                <h2>Blood Donor</h2>
+
+                <p>Eligibility System</p>
+
+            </div>
+
+        </a>
+
+
+
+        <!-- Main Heading -->
+
+        <div class="left-content">
+
+            <h1>
+                Save Lives,
+                <br>
+                Make Impact
+                <i class="fa-regular fa-heart"></i>
+            </h1>
+
+
+            <p class="subtitle">
+
+                AI-Powered Donor Eligibility &
+                <br>
+                Blood Inventory Management
+
+            </p>
+
+
+            <div class="red-line"></div>
+
+
+
+            <!-- Feature 1 -->
+
+            <div class="feature">
+
+                <div class="feature-icon">
+
+                    <i class="fa-solid fa-brain"></i>
+
+                </div>
+
+
+                <div>
+
+                    <h3>
+                        AI-Powered Predictions
+                    </h3>
+
+                    <p>
+                        Advanced machine learning models
+                        predict donor eligibility with high accuracy.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Feature 2 -->
+
+            <div class="feature">
+
+                <div class="feature-icon">
+
+                    <i class="fa-solid fa-droplet"></i>
+
+                </div>
+
+
+                <div>
+
+                    <h3>
+                        Smart Inventory Management
+                    </h3>
+
+                    <p>
+                        Real-time blood inventory tracking
+                        and shortage prediction.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Feature 3 -->
+
+            <div class="feature">
+
+                <div class="feature-icon">
+
+                    <i class="fa-solid fa-shield-halved"></i>
+
+                </div>
+
+
+                <div>
+
+                    <h3>
+                        Secure & Reliable
+                    </h3>
+
+                    <p>
+                        Your data is protected with enterprise
+                        grade security and compliance.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Decorative Bottom -->
+
+        <div class="heartbeat">
+
+            <i class="fa-solid fa-heart-pulse"></i>
+
+        </div>
+
+
+        <div class="blood-visual">
+
+            <div class="blood-bag">
+
+                <span>A+</span>
+
+            </div>
+
+
+            <div class="blood-drop">
+
+                <div class="white-cross">
+
+                    <span></span>
+                    <span></span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- ================================= -->
+    <!-- RIGHT SIDE -->
+    <!-- ================================= -->
+
+    <section class="right-section">
+
+
+        <!-- Decorative Elements -->
+
+        <div class="dots dots-top"></div>
+
+        <div class="decor-plus">+</div>
+
+        <i class="fa-regular fa-heart decor-heart"></i>
+
+
+
+        <!-- LOGIN CARD -->
+
+        <div class="login-card">
+
+
+            <!-- Login Logo -->
+
+            <div class="login-logo">
+
+                <div class="login-drop">
+
+                    <i class="fa-solid fa-plus"></i>
+
+                </div>
+
+            </div>
+
+
+
+            <h1>
+                Welcome Back!
+            </h1>
+
+
+            <p class="login-description">
+
+                Sign in to access your hospital or
+                <br>
+                blood bank dashboard.
+
+            </p>
+
+
+
+            <!-- ERROR MESSAGE -->
+
+            <div
+                class="error-message"
+                id="errorMessage"
+            ></div>
+
+
+
+            <!-- LOGIN FORM -->
+
+            <form id="loginForm">
+
+
+                <!-- EMAIL -->
+
+                <div class="form-group">
+
+                    <label for="email">
+
+                        Email Address
+
+                    </label>
+
+
+                    <div class="input-container">
+
+                        <i class="fa-regular fa-envelope"></i>
+
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="Enter your email address"
+                            autocomplete="email"
+                        >
+
+                    </div>
+
+                    <small
+                        class="field-error"
+                        id="emailError"
+                    ></small>
+
+                </div>
+
+
+
+                <!-- PASSWORD -->
+
+                <div class="form-group">
+
+                    <label for="password">
+
+                        Password
+
+                    </label>
+
+
+                    <div class="input-container">
+
+                        <i class="fa-solid fa-lock"></i>
+
+
+                        <input
+                            type="password"
+                            id="password"
+                            placeholder="Enter your password"
+                            autocomplete="current-password"
+                        >
+
+
+                        <button
+                            type="button"
+                            class="password-toggle"
+                            id="passwordToggle"
+                            aria-label="Show password"
+                        >
+
+                            <i
+                                class="fa-regular fa-eye"
+                                id="eyeIcon"
+                            ></i>
+
+                        </button>
+
+                    </div>
+
+
+                    <small
+                        class="field-error"
+                        id="passwordError"
+                    ></small>
+
+                </div>
+
+
+
+                <!-- REMEMBER / FORGOT -->
+
+                <div class="login-options">
+
+
+                    <label class="remember">
+
+                        <input
+                            type="checkbox"
+                            id="rememberMe"
+                        >
+
+                        <span class="custom-checkbox">
+
+                            <i class="fa-solid fa-check"></i>
+
+                        </span>
+
+                        Remember me
+
+                    </label>
+
+
+
+                    <a
+                        href="#"
+                        id="forgotPassword"
+                        class="forgot-password"
+                    >
+
+                        Forgot Password?
+
+                    </a>
+
+                </div>
+
+
+
+                <!-- SIGN IN -->
+
+                <button
+                    type="submit"
+                    class="sign-in-btn"
+                    id="signInBtn"
+                >
+
+                    <i class="fa-solid fa-arrow-right-to-bracket"></i>
+
+                    <span>Sign In</span>
+
+                </button>
+
+
+            </form>
+
+
+
+            <!-- DIVIDER -->
+
+            <div class="divider">
+
+                <span></span>
+
+                <p>or</p>
+
+                <span></span>
+
+            </div>
+
+
+
+            <!-- GOOGLE -->
+
+            <button
+                type="button"
+                class="google-btn"
+                id="googleLogin"
+            >
+
+                <span class="google-icon">G</span>
+
+                Sign in with Google
+
+            </button>
+
+
+
+            <!-- SECURITY -->
+
+            <div class="security-box">
+
+                <i class="fa-solid fa-shield-halved"></i>
+
+                <p>
+                    Secure access for authorized
+                    <br>
+                    hospital and blood bank staff only.
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- FOOTER -->
+
+        <div class="login-footer">
+
+            <i class="fa-regular fa-heart"></i>
+
+            <p>
+                © 2026 Blood Donor Eligibility System.
+                All rights reserved.
+            </p>
+
+        </div>
+
+
+    </section>
+
+
+</div>
+
+
+<!-- JavaScript -->
+
+<script src="login.js"></script>
+
+</body>
+</html>
