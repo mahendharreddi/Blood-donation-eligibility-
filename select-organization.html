@@ -1,0 +1,11 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Select Organization | Blood Donor Eligibility System</title><link rel="stylesheet" href="app.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"></head><body>
+<main style="margin:auto;text-align:center;max-width:900px">
+<h1>Select your organization</h1><p class="sub">Choose where you are working today.</p>
+<div class="orgs">
+<div class="card org" data-n="City Hospital"><i class="fa-solid fa-hospital"></i><h4>Hospital</h4><p>Manage patients' blood needs</p></div>
+<div class="card org" data-n="Central Blood Bank"><i class="fa-solid fa-droplet"></i><h4>Blood Bank</h4><p>Track stock and donors</p></div>
+<div class="card org" data-n="Donation Camp"><i class="fa-solid fa-people-group"></i><h4>Donation Camp</h4><p>Screen donors on site</p></div>
+</div></main>
+<script src="app.js"></script>
+<script>document.querySelectorAll('.org').forEach(o=>o.onclick=()=>{set(K.org,o.dataset.n);location.href='dashboard.html'})</script>
+</body></html>

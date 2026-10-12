@@ -1,0 +1,34 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Predict Eligibility | Blood Donor Eligibility System</title><link rel="stylesheet" href="app.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"></head><body>
+<aside id="side"></aside><main>
+<h1>Donor Eligibility Prediction</h1><p class="sub">Enter donor details to check eligibility.</p>
+<div class="card" style="max-width:700px"><form id="f">
+<label>Donor name</label><input id="name" required>
+<div class="row"><div><label>Age</label><input id="age" type="number" required></div><div><label>Weight (kg)</label><input id="wt" type="number" required></div></div>
+<div class="row"><div><label>Hemoglobin (g/dL)</label><input id="hb" type="number" step="0.1" required></div><div><label>Days since last donation</label><input id="last" type="number" value="999" required></div></div>
+<label>Blood group</label><select id="bg"></select>
+<label class="chk"><input type="checkbox" id="ill">Fever / infection in last 14 days</label>
+<label class="chk"><input type="checkbox" id="tat">Tattoo or surgery in last 6 months</label>
+<button class="btn" type="submit">Check Eligibility</button><button class="btn alt" type="button" id="save" style="display:none">Save donor</button>
+</form><div class="result" id="res"></div></div></main>
+<script src="app.js"></script>
+<script>
+shell('predict.html');
+bg.innerHTML=GROUPS.map(g=>`<option>${g}</option>`).join('');
+let cur=null;
+// Rule-based placeholder. Replace evaluate() with fetch('/api/predict') to your LightGBM model later.
+function evaluate(d){const r=[];
+ if(d.age<18||d.age>65)r.push('Age must be 18–65');
+ if(d.wt<50)r.push('Weight must be at least 50 kg');
+ if(d.hb<12.5)r.push('Hemoglobin must be at least 12.5 g/dL');
+ if(d.last<90)r.push('Last donation was under 90 days ago');
+ if(d.ill)r.push('Recent fever/infection');
+ if(d.tat)r.push('Recent tattoo/surgery');
+ return r}
+f.onsubmit=e=>{e.preventDefault();
+ cur={name:name.value,age:+age.value,wt:+wt.value,hb:+hb.value,last:+last.value,bg:bg.value,ill:ill.checked,tat:tat.checked,date:new Date().toLocaleDateString()};
+ const r=evaluate(cur);cur.eligible=!r.length;cur.reasons=r;
+ res.className='result '+(cur.eligible?'ok':'bad');
+ res.innerHTML=cur.eligible?'<b>✔ Eligible to donate.</b>':'<b>✖ Not eligible:</b><br>• '+r.join('<br>• ');
+ save.style.display='inline-block'};
+save.onclick=()=>{const D=donors();D.push(cur);set(K.donors,D);location.href='donors.html'};
+</script></body></html>

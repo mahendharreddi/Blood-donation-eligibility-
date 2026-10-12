@@ -1,0 +1,12 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Donors | Blood Donor Eligibility System</title><link rel="stylesheet" href="app.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"></head><body>
+<aside id="side"></aside><main>
+<h1>Donors</h1><p class="sub">All screened donors.</p>
+<div class="card"><table><thead><tr><th>Name</th><th>Age</th><th>Group</th><th>Hb</th><th>Status</th><th>Date</th><th></th></tr></thead><tbody id="tb"></tbody></table><p id="empty" class="sub" style="margin:14px 0 0;display:none">No donors yet. Use Predict Eligibility to add one.</p></div></main>
+<script src="app.js"></script>
+<script>
+shell('donors.html');
+function draw(){const D=donors();empty.style.display=D.length?'none':'block';
+tb.innerHTML=D.map((d,i)=>`<tr><td>${d.name.replace(/</g,'&lt;')}</td><td>${d.age}</td><td>${d.bg}</td><td>${d.hb}</td><td class="${d.eligible?'ok':'bad'}">${d.eligible?'Eligible':'Not eligible'}</td><td>${d.date}</td><td><a href="#" onclick="del(${i})" class="bad">Delete</a></td></tr>`).join('')}
+function del(i){const D=donors();D.splice(i,1);set(K.donors,D);draw()}
+draw();
+</script></body></html>

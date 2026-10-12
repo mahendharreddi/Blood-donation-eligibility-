@@ -1,0 +1,11 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Inventory | Blood Donor Eligibility System</title><link rel="stylesheet" href="app.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"></head><body>
+<aside id="side"></aside><main>
+<h1>Blood Inventory</h1><p class="sub">Update stock as units are collected or issued.</p>
+<div class="card"><table><thead><tr><th>Group</th><th>Units</th><th>Status</th><th>Update</th></tr></thead><tbody id="tb"></tbody></table></div></main>
+<script src="app.js"></script>
+<script>
+shell('inventory.html');
+function draw(){const I=inv();tb.innerHTML=GROUPS.map(g=>`<tr><td><b>${g}</b></td><td>${I[g]}</td><td>${I[g]<LOW?'<span class="low">Low</span>':'<span class="ok">OK</span>'}</td><td><button class="btn alt" style="margin:0" onclick="chg('${g}',-1)">−</button> <button class="btn" style="margin:0" onclick="chg('${g}',1)">+</button></td></tr>`).join('')}
+function chg(g,n){const I=inv();I[g]=Math.max(0,I[g]+n);set(K.inv,I);draw()}
+draw();
+</script></body></html>

@@ -1,52 +1,52 @@
 /* =================================
    GLOBAL
 ================================= */
-
+ 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
+ 
 body {
     font-family: "Inter", sans-serif;
     min-height: 100vh;
     background: #fff;
 }
-
+ 
 a {
     text-decoration: none;
 }
-
-
+ 
+ 
 /* =================================
    MAIN PAGE
 ================================= */
-
+ 
 .login-page {
     width: 100%;
     min-height: 100vh;
-
+ 
     display: grid;
     grid-template-columns: 1fr 1.15fr;
 }
-
-
+ 
+ 
 /* =================================
    LEFT SECTION
 ================================= */
-
+ 
 .left-section {
     position: relative;
-
+ 
     min-height: 100vh;
-
+ 
     padding: 55px 65px;
-
+ 
     overflow: hidden;
-
+ 
     color: white;
-
+ 
     background:
         radial-gradient(
             circle at 80% 25%,
@@ -60,223 +60,223 @@ a {
             #8f1423 100%
         );
 }
-
-
+ 
+ 
 /* Dark Overlay Pattern */
-
+ 
 .left-section::before {
     content: "";
-
+ 
     position: absolute;
     inset: 0;
-
+ 
     background:
         radial-gradient(
             circle at 90% 15%,
             rgba(255,255,255,0.05),
             transparent 20%
         );
-
+ 
     pointer-events: none;
 }
-
-
+ 
+ 
 /* =================================
    BRAND
 ================================= */
-
+ 
 .brand {
     position: relative;
     z-index: 5;
-
+ 
     display: inline-flex;
     align-items: center;
-
+ 
     gap: 14px;
-
+ 
     color: white;
 }
-
+ 
 .brand-icon {
     width: 45px;
     height: 55px;
-
+ 
     position: relative;
-
+ 
     display: flex;
     align-items: center;
     justify-content: center;
-
+ 
     color: white;
-
+ 
     font-size: 40px;
 }
-
+ 
 .brand-icon span {
     position: absolute;
-
+ 
     font-size: 17px;
     font-weight: bold;
-
+ 
     color: #b81025;
-
+ 
     background: white;
-
+ 
     width: 21px;
     height: 21px;
-
+ 
     border-radius: 50%;
-
+ 
     display: flex;
     align-items: center;
     justify-content: center;
 }
-
+ 
 .brand h2 {
     font-size: 22px;
     font-weight: 700;
 }
-
+ 
 .brand p {
     margin-top: 3px;
-
+ 
     font-size: 16px;
 }
-
-
+ 
+ 
 /* =================================
    LEFT CONTENT
 ================================= */
-
+ 
 .left-content {
     position: relative;
     z-index: 5;
-
+ 
     max-width: 520px;
-
+ 
     margin-top: 75px;
 }
-
+ 
 .left-content h1 {
     font-size: 48px;
     line-height: 1.15;
-
+ 
     font-weight: 700;
 }
-
+ 
 .left-content h1 i {
     margin-left: 10px;
-
+ 
     color: rgba(255,255,255,0.4);
-
+ 
     font-size: 36px;
 }
-
+ 
 .subtitle {
     margin-top: 28px;
-
+ 
     font-size: 21px;
     line-height: 1.5;
-
+ 
     color: rgba(255,255,255,0.92);
 }
-
+ 
 .red-line {
     width: 70px;
     height: 4px;
-
+ 
     margin: 30px 0;
-
+ 
     border-radius: 5px;
-
+ 
     background: #e01b34;
 }
-
-
+ 
+ 
 /* =================================
    FEATURES
 ================================= */
-
+ 
 .feature {
     display: flex;
     align-items: center;
-
+ 
     gap: 20px;
-
+ 
     margin-bottom: 30px;
 }
-
+ 
 .feature-icon {
     width: 60px;
     height: 60px;
-
+ 
     flex-shrink: 0;
-
+ 
     display: flex;
     align-items: center;
     justify-content: center;
-
+ 
     border-radius: 50%;
-
+ 
     border: 2px solid rgba(255, 80, 95, 0.6);
-
+ 
     font-size: 25px;
 }
-
+ 
 .feature h3 {
     font-size: 16px;
     font-weight: 700;
 }
-
+ 
 .feature p {
     margin-top: 7px;
-
+ 
     font-size: 13px;
     line-height: 1.6;
-
+ 
     color: rgba(255,255,255,0.85);
 }
-
-
+ 
+ 
 /* =================================
    BOTTOM DECORATION
 ================================= */
-
+ 
 .heartbeat {
     position: absolute;
-
+ 
     bottom: 90px;
     left: 55px;
-
+ 
     color: rgba(255,255,255,0.08);
-
+ 
     font-size: 130px;
 }
-
+ 
 .blood-visual {
     position: absolute;
-
+ 
     right: 30px;
     bottom: 15px;
-
+ 
     width: 280px;
     height: 270px;
 }
-
-
+ 
+ 
 /* Blood Bag */
-
+ 
 .blood-bag {
     position: absolute;
-
+ 
     right: 25px;
     bottom: 20px;
-
+ 
     width: 115px;
     height: 190px;
-
+ 
     border-radius: 20px 20px 30px 30px;
-
+ 
     background:
         linear-gradient(
             to bottom,
@@ -284,106 +284,106 @@ a {
             #9e1727 26%,
             #c71d31 100%
         );
-
+ 
     box-shadow:
         0 20px 30px rgba(0,0,0,0.2);
-
+ 
     display: flex;
     align-items: center;
     justify-content: center;
 }
-
+ 
 .blood-bag span {
     margin-top: 50px;
-
+ 
     font-size: 28px;
     font-weight: 800;
-
+ 
     color: white;
 }
-
-
+ 
+ 
 /* Blood Drop */
-
+ 
 .blood-drop {
     position: absolute;
-
+ 
     left: 15px;
     bottom: 20px;
-
+ 
     width: 140px;
     height: 180px;
-
+ 
     z-index: 2;
-
+ 
     background:
         linear-gradient(
             145deg,
             #ff4555,
             #b50019
         );
-
+ 
     border-radius:
         55% 55% 55% 55% /
         65% 65% 40% 40%;
-
+ 
     box-shadow:
         0 20px 40px rgba(0,0,0,0.25),
         inset 10px 10px 20px rgba(255,255,255,0.2);
 }
-
+ 
 .white-cross {
     position: absolute;
-
+ 
     top: 70px;
     left: 45px;
-
+ 
     width: 55px;
     height: 55px;
 }
-
+ 
 .white-cross span:first-child {
     position: absolute;
-
+ 
     width: 55px;
     height: 18px;
-
+ 
     top: 18px;
-
+ 
     border-radius: 4px;
-
+ 
     background: white;
 }
-
+ 
 .white-cross span:last-child {
     position: absolute;
-
+ 
     width: 18px;
     height: 55px;
-
+ 
     left: 18px;
-
+ 
     border-radius: 4px;
-
+ 
     background: white;
 }
-
-
+ 
+ 
 /* =================================
    RIGHT SECTION
 ================================= */
-
+ 
 .right-section {
     position: relative;
-
+ 
     min-height: 100vh;
-
+ 
     padding: 50px 30px 80px;
-
+ 
     display: flex;
     align-items: center;
     justify-content: center;
-
+ 
     background:
         radial-gradient(
             circle at 20% 20%,
@@ -392,544 +392,544 @@ a {
         ),
         #fffdfd;
 }
-
-
+ 
+ 
 /* =================================
    LOGIN CARD
 ================================= */
-
+ 
 .login-card {
     width: 100%;
     max-width: 550px;
-
+ 
     position: relative;
     z-index: 5;
-
+ 
     padding: 50px 42px 38px;
-
+ 
     background:
         rgba(255,255,255,0.95);
-
+ 
     border-radius: 25px;
-
+ 
     box-shadow:
         0 25px 60px
         rgba(130, 20, 30, 0.1);
-
+ 
     border:
         1px solid rgba(220, 220, 220, 0.5);
 }
-
-
+ 
+ 
 /* =================================
    LOGIN LOGO
 ================================= */
-
+ 
 .login-logo {
     width: 105px;
     height: 105px;
-
+ 
     margin: 0 auto 18px;
-
+ 
     border: 1px solid #e0e1e5;
-
+ 
     border-radius: 50%;
-
+ 
     display: flex;
     align-items: center;
     justify-content: center;
 }
-
+ 
 .login-drop {
     width: 52px;
     height: 62px;
-
+ 
     color: #c81025;
-
+ 
     border: 4px solid #c81025;
-
+ 
     border-radius:
         50% 50% 55% 55% /
         65% 65% 45% 45%;
-
+ 
     display: flex;
     align-items: center;
     justify-content: center;
 }
-
+ 
 .login-drop i {
     font-size: 20px;
 }
-
+ 
 .login-card > h1 {
     text-align: center;
-
+ 
     font-size: 31px;
-
+ 
     color: #202636;
 }
-
+ 
 .login-description {
     margin-top: 8px;
-
+ 
     text-align: center;
-
+ 
     font-size: 16px;
     line-height: 1.5;
-
+ 
     color: #616575;
 }
-
-
+ 
+ 
 /* =================================
    FORM
 ================================= */
-
+ 
 form {
     margin-top: 28px;
 }
-
+ 
 .form-group {
     margin-bottom: 20px;
 }
-
+ 
 .form-group label {
     display: block;
-
+ 
     margin-bottom: 10px;
-
+ 
     font-size: 14px;
     font-weight: 600;
-
+ 
     color: #242a38;
 }
-
+ 
 .input-container {
     height: 57px;
-
+ 
     position: relative;
-
+ 
     display: flex;
     align-items: center;
-
+ 
     border: 1px solid #cfd2d8;
-
+ 
     border-radius: 7px;
-
+ 
     transition: 0.25s;
 }
-
+ 
 .input-container:focus-within {
     border-color: #c81025;
-
+ 
     box-shadow:
         0 0 0 3px rgba(200, 16, 37, 0.08);
 }
-
+ 
 .input-container > i {
     margin-left: 16px;
-
+ 
     color: #858b99;
-
+ 
     font-size: 17px;
 }
-
+ 
 .input-container input {
     width: 100%;
     height: 100%;
-
+ 
     padding: 0 45px 0 13px;
-
+ 
     border: none;
     outline: none;
-
+ 
     background: transparent;
-
+ 
     color: #252936;
-
+ 
     font-family: inherit;
     font-size: 14px;
 }
-
+ 
 .input-container input::placeholder {
     color: #8c91a0;
 }
-
+ 
 .password-toggle {
     position: absolute;
-
+ 
     right: 15px;
-
+ 
     border: none;
     background: none;
-
+ 
     color: #858b99;
-
+ 
     cursor: pointer;
-
+ 
     font-size: 17px;
 }
-
+ 
 .field-error {
     display: block;
-
+ 
     min-height: 14px;
-
+ 
     margin-top: 5px;
-
+ 
     color: #d30020;
-
+ 
     font-size: 11px;
 }
-
-
+ 
+ 
 /* =================================
    LOGIN OPTIONS
 ================================= */
-
+ 
 .login-options {
     margin: 5px 0 22px;
-
+ 
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-
+ 
 .remember {
     display: flex !important;
     align-items: center;
-
+ 
     gap: 9px;
-
+ 
     margin: 0 !important;
-
+ 
     cursor: pointer;
-
+ 
     font-weight: 400 !important;
 }
-
+ 
 .remember input {
     display: none;
 }
-
+ 
 .custom-checkbox {
     width: 20px;
     height: 20px;
-
+ 
     border-radius: 4px;
-
+ 
     background: #c81025;
-
+ 
     color: white;
-
+ 
     display: flex;
     align-items: center;
     justify-content: center;
-
+ 
     font-size: 11px;
 }
-
+ 
 .remember input:not(:checked)
 + .custom-checkbox {
     background: white;
-
+ 
     border: 1px solid #bbb;
-
+ 
     color: transparent;
 }
-
+ 
 .forgot-password {
     color: #c81025;
-
+ 
     font-size: 13px;
 }
-
-
+ 
+ 
 /* =================================
    SIGN IN
 ================================= */
-
+ 
 .sign-in-btn {
     width: 100%;
     height: 60px;
-
+ 
     border: none;
-
+ 
     border-radius: 7px;
-
+ 
     color: white;
-
+ 
     background:
         linear-gradient(
             90deg,
             #c90c22,
             #d50d25
         );
-
+ 
     font-family: inherit;
     font-size: 17px;
     font-weight: 700;
-
+ 
     cursor: pointer;
-
+ 
     display: flex;
     align-items: center;
     justify-content: center;
-
+ 
     gap: 14px;
-
+ 
     transition: 0.3s;
 }
-
+ 
 .sign-in-btn:hover {
     transform: translateY(-2px);
-
+ 
     box-shadow:
         0 10px 25px
         rgba(200, 16, 37, 0.25);
 }
-
+ 
 .sign-in-btn:disabled {
     opacity: 0.7;
-
+ 
     cursor: not-allowed;
 }
-
-
+ 
+ 
 /* =================================
    DIVIDER
 ================================= */
-
+ 
 .divider {
     margin: 26px 0;
-
+ 
     display: flex;
     align-items: center;
-
+ 
     gap: 18px;
 }
-
+ 
 .divider span {
     flex: 1;
-
+ 
     height: 1px;
-
+ 
     background: #d9dade;
 }
-
+ 
 .divider p {
     color: #747985;
-
+ 
     font-size: 13px;
 }
-
-
+ 
+ 
 /* =================================
    GOOGLE BUTTON
 ================================= */
-
+ 
 .google-btn {
     width: 100%;
     height: 57px;
-
+ 
     border: 1px solid #d2d4d9;
-
+ 
     border-radius: 7px;
-
+ 
     background: white;
-
+ 
     color: #252936;
-
+ 
     font-family: inherit;
     font-size: 14px;
     font-weight: 600;
-
+ 
     cursor: pointer;
-
+ 
     display: flex;
     align-items: center;
     justify-content: center;
-
+ 
     gap: 13px;
-
+ 
     transition: 0.25s;
 }
-
+ 
 .google-btn:hover {
     background: #fafafa;
-
+ 
     border-color: #aaa;
 }
-
+ 
 .google-icon {
     font-size: 20px;
     font-weight: 800;
-
+ 
     color: #4285f4;
 }
-
-
+ 
+ 
 /* =================================
    SECURITY
 ================================= */
-
+ 
 .security-box {
     margin-top: 20px;
-
+ 
     padding: 17px 22px;
-
+ 
     border-radius: 8px;
-
+ 
     background: #f8f9fb;
-
+ 
     border: 1px solid #e4e5e8;
-
+ 
     display: flex;
     align-items: center;
-
+ 
     justify-content: center;
-
+ 
     gap: 18px;
 }
-
+ 
 .security-box i {
     color: #c81025;
-
+ 
     font-size: 25px;
 }
-
+ 
 .security-box p {
     color: #4f5564;
-
+ 
     font-size: 12px;
     line-height: 1.5;
 }
-
-
+ 
+ 
 /* =================================
    ERROR MESSAGE
 ================================= */
-
+ 
 .error-message {
     display: none;
-
+ 
     margin-top: 18px;
-
+ 
     padding: 12px;
-
+ 
     border-radius: 6px;
-
+ 
     color: #b4001b;
-
+ 
     background: #fff0f2;
-
+ 
     font-size: 12px;
-
+ 
     text-align: center;
 }
-
+ 
 .error-message.show {
     display: block;
 }
-
-
+ 
+ 
 /* =================================
    FOOTER
 ================================= */
-
+ 
 .login-footer {
     position: absolute;
-
+ 
     bottom: 25px;
-
+ 
     display: flex;
     align-items: center;
-
+ 
     gap: 9px;
-
+ 
     color: #777d8c;
-
+ 
     font-size: 11px;
 }
-
+ 
 .login-footer i {
     color: #d41129;
 }
-
-
+ 
+ 
 /* =================================
    DECORATIONS
 ================================= */
-
+ 
 .decor-plus {
     position: absolute;
-
+ 
     right: 8%;
     top: 32%;
-
+ 
     color: rgba(210, 20, 40, 0.18);
-
+ 
     font-size: 55px;
     font-weight: 800;
 }
-
+ 
 .decor-heart {
     position: absolute;
-
+ 
     right: 8%;
     bottom: 18%;
-
+ 
     color: rgba(210, 20, 40, 0.15);
-
+ 
     font-size: 55px;
 }
-
-
+ 
+ 
 /* =================================
    RESPONSIVE
 ================================= */
-
+ 
 @media (max-width: 1000px) {
-
+ 
     .login-page {
         grid-template-columns: 1fr;
     }
-
+ 
     .left-section {
         display: none;
     }
-
+ 
     .right-section {
         padding: 40px 20px 90px;
     }
-
+ 
 }
-
-
+ 
+ 
 @media (max-width: 600px) {
-
+ 
     .login-card {
         padding:
             35px 22px 30px;
-
+ 
         border-radius: 18px;
     }
-
+ 
     .login-logo {
         width: 80px;
         height: 80px;
     }
-
+ 
     .login-card > h1 {
         font-size: 26px;
     }
-
+ 
     .login-description {
         font-size: 14px;
     }
-
+ 
     .login-options {
         gap: 10px;
     }
-
+ 
 }

@@ -1,0 +1,18 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Dashboard | Blood Donor Eligibility System</title><link rel="stylesheet" href="app.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"></head><body>
+<aside id="side"></aside><main>
+<h1>Dashboard</h1><p class="sub">Overview of donors and blood stock.</p>
+<div class="grid" id="stats"></div>
+<div class="grid" style="grid-template-columns:1fr 1fr">
+<div class="card"><h4>Blood stock (units)</h4><div id="bars"></div></div>
+<div class="card"><h4>Low stock alerts</h4><div id="alerts"></div></div></div>
+<a class="btn" href="predict.html" style="text-decoration:none;display:inline-block">+ Check a donor</a>
+</main>
+<script src="app.js"></script>
+<script>
+shell('dashboard.html');
+const I=inv(),D=donors(),tot=Object.values(I).reduce((a,b)=>a+b,0),low=GROUPS.filter(g=>I[g]<LOW);
+document.getElementById('stats').innerHTML=[[D.length,'Donors screened'],[D.filter(d=>d.eligible).length,'Eligible donors'],[tot,'Units in stock'],[low.length,'Low-stock groups']].map(s=>`<div class="card"><h3>${s[0]}</h3><p>${s[1]}</p></div>`).join('');
+const mx=Math.max(...Object.values(I));
+document.getElementById('bars').innerHTML=GROUPS.map(g=>`<div class="bar"><b>${g}</b><i style="width:${I[g]/mx*70}%"></i>${I[g]}</div>`).join('');
+document.getElementById('alerts').innerHTML=low.length?low.map(g=>`<p><span class="low">${g}</span> only ${I[g]} units left</p>`).join(''):'<p class="ok">All groups sufficiently stocked.</p>';
+</script></body></html>

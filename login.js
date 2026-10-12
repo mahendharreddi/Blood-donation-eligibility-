@@ -235,6 +235,8 @@ loginForm.addEventListener(
             // DEMO SUCCESS
             // Redirect to organization selection
 
+            localStorage.setItem("bd_auth", JSON.stringify({email: email}));
+
             window.location.href =
                 "select-organization.html";
 
